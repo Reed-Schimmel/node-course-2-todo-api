@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "mocha server/**/*.test.js",
+    "test": "SET \"NODE_ENV = test \" && mocha server/**/*.test.js --timeout 5000",
     "test-watch": "nodemon --exec yarn test"
   },
   "license": "MIT",
