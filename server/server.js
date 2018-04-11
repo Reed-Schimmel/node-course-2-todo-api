@@ -72,7 +72,7 @@ app.delete('/todos/:id', (req, res) => {
       }
       
       // if doc, send doc back with 200
-      res.send(todo);
+      res.send({ todo });
     }) //error send 404 with empty body
     .catch(error => res.status(400).send());
 });
