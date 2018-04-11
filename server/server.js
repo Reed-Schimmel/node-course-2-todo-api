@@ -32,7 +32,7 @@ app.get('/todos/:id', (req, res) => {
   // Valid id using isValid
     // 400 send back empty body
   if (!ObjectID.isValid(id)) {
-    return res.status(400).send(); // bad request
+    return res.status(404).send();
   }
 
   // find by id
