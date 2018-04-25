@@ -1,0 +1,253 @@
+{
+	"info": {
+		"_postman_id": "02f21f05-dfe0-46b2-894f-e9fe1ded9ae1",
+		"name": "Todo App",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET /todos",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YWUwYTM1ZmY0ODk3NzAwMTRmZDE2MDIiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTI0NjcxMzI4fQ.8m1j6TWeVBxzh5vrCqh14FFZOpHsAZsAhXcVVjcLVow"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"text\": \"your brother?\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /todos",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "x-auth",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YWUwYTM1ZmY0ODk3NzAwMTRmZDE2MDIiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTI0NjcxMzI4fQ.8m1j6TWeVBxzh5vrCqh14FFZOpHsAZsAhXcVVjcLVow"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"text\": \"Eat some food!\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/todos",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "PATCH/todo/:id",
+			"request": {
+				"method": "PATCH",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"completed\": true\n}"
+				},
+				"url": {
+					"raw": "{{url}}/todo/5acd81d9b4448c14bc75e756",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todo",
+						"5acd81d9b4448c14bc75e756"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /todos/:id",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"text\": \"your brother?\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/todos/5acd7258f83ddf3ebc504678",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"5acd7258f83ddf3ebc504678"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /todos/:id",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"text\": \"your brother?\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/todos/5acd7ce9e19ee318e4520a5f",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"todos",
+						"5acd7ce9e19ee318e4520a5f"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST /users",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"email\": \"reed2er960@gmail.com\",\n\"password\": \"I love cake\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/users",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET /users/me",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YWUwYTM1ZmY0ODk3NzAwMTRmZDE2MDIiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTI0NjcxMzI4fQ.8m1j6TWeVBxzh5vrCqh14FFZOpHsAZsAhXcVVjcLVow"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/users/me",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"me"
+					]
+				},
+				"description": "requires x-auth header"
+			},
+			"response": []
+		},
+		{
+			"name": "POST /users/login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"extra\": \"this should not appear in the reponse body\",\n\t\"email\": \"reede6adf0@gmail.com\",\n\t\"password\": \"I love cake\"\n}"
+				},
+				"url": {
+					"raw": "{{url}}/users/login",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE /users/me/token",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "x-auth",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1YWUwMTQ0NTJkOWFiNDQzZDlkYzg1MzgiLCJhY2Nlc3MiOiJhdXRoIiwiaWF0IjoxNTI0NjM0NjkzfQ.-6Kt7nyvXUnqPB1FxhNxAxmvT_VIQ45uhZsLPvEwhCw"
+					}
+				],
+				"body": {},
+				"url": {
+					"raw": "{{url}}/users/me/token",
+					"host": [
+						"{{url}}"
+					],
+					"path": [
+						"users",
+						"me",
+						"token"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
